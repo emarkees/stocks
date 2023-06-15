@@ -1,0 +1,166 @@
+:root {
+  --tw-text-opacity: 1;
+  --primary-color: #fff;
+  --secondary-color: #2e205b;
+}
+
+.stock-trnsit {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0;
+  background-color: var(--primary-color);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.stock-trans {
+  display: flex;
+  flex-direction: row;
+  padding: 0.2rem 0.5rem;
+  align-items: center;
+  gap: 0.2rem;
+  height: 2rem;
+  font-family: myFont, sans-serif;
+  animation: marquee 40s linear infinite;
+}
+
+.search {
+  padding: 0.5rem;
+  width: 20rem;
+  border-radius: 0.5rem;
+}
+
+.stock-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+  padding: 2rem;
+  font-family: myFont, sans-serif;
+}
+
+.border {
+  margin: 0;
+  width: auto;
+  height: auto;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  gap: 0.9rem;
+  font-family: myFont, sans-serif;
+  color: #fff;
+}
+
+.card-ref {
+  width: 10rem;
+  height: 8rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.52rem;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-item:nth-child(3n+1) {
+  background-color: #1cc08f;
+}
+
+.card-item:nth-child(3n+2) {
+  background-color: #1c84c9;
+}
+
+.card-item:nth-child(3n+3) {
+  background-color: #1bb4cf;
+}
+
+h1,
+h3,
+h4 {
+  margin: 0.5rem;
+}
+
+.price-data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  height: 20%;
+  border-radius: 0.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.symbol {
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+.name {
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+.font {
+  font-family: myFont, sans-serif;
+  color: #fff;
+}
+
+.error {
+  color: red;
+}
+
+.prce,
+.changesPercentage {
+  width: auto;
+  padding: 0.05rem 0.5rem;
+  border: 1px solid #c0c0c0;
+  border: 1px solid #58ca39;
+  border-radius: 3px;
+  color: #e1ebde;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 1025px) {
+  .stock-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (min-width: 486px)  and (max-width: 786px) {
+  .stock-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .stock-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
