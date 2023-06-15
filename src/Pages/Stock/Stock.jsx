@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { fetchStockData } from '../../redux/Stocks/StocksSlice';
 import './Stock.css';
-import StockChart from '../../Components/Chart/Chart';
 
 const Stock = () => {
   const stocks = useSelector((state) => state.stocks.stocks);
@@ -49,8 +48,6 @@ const Stock = () => {
       <Link to="/" className="home">&lt;</Link>
       <div className="container-border">
         <div className="stock card-item-border card-border card-ref-border" key={uuidv4()}>
-
-          <StockChart symbol={selectedStock.symbol} />
           <div className="header-border">
             <div className="header-container">
               <span className="stock-symbol">
