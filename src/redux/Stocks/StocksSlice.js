@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const symbol = 'A,AA,AAC,AACG,AACI,AACT,AADI,AAIC,AAL,AAP,AAPL,AAT,BGS,BGSF,BGXX,BHVN,BIAF,BIDU,BIG,BIGC,BIIB,BIOX,BIP,BIPC,CASA,CASH,CASI,CASS,CASY,CAT,CATC,CATO';
 
-const apiKey = '8ad02420a2fa95c85c6d259810c4f20a';
+const apiKey = 'cf6a8af735cc0cf3ec5fc2a976ce04e3';
 
 const quoteUrl = `https://financialmodelingprep.com/api/v3/quote/${symbol}?apikey=${apiKey}`;
 const historicalDataUrl = `https://financialmodelingprep.com/api/v3/historical-price-full/${symbol}?apikey=${apiKey}`;

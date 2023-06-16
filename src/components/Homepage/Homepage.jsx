@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchStockData } from '../../redux/Stocks/StocksSlice';
+import logo from '../../assests/images/logo.svg';
 import './Homepage.css';
 
 const Homepage = () => {
@@ -83,15 +84,18 @@ const Homepage = () => {
 
   return (
     <div className="container">
-      <input
-        type="text"
-        placeholder="Search"
-        className="search"
-        value={searchItem}
-        onChange={handleSearchInputChange}
-      />
+      <div className="logo-container">
+        <img src={logo} alt="logo" className="logo" />
+        <input
+          type="text"
+          placeholder="Search"
+          className="search"
+          value={searchItem}
+          onChange={handleSearchInputChange}
+        />
+      </div>
       {loading && <div>Loading...</div>}
-      <span>{errorMsg}</span>
+      <span className="scroll">{errorMsg}</span>
 
       <div className="stock-trnsit">
         <div className="stock-trans">

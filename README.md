@@ -1,7 +1,6 @@
 <a name="readme-top"></a>
 
 <div align="center" style="text-align: center">
-  <img src = "logo.png">  
   <h1><b>Stock Quote</b></h1>
 </div>
 

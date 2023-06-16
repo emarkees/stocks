@@ -1,7 +1,7 @@
 #root,
 body {
   height: auto;
-  background-color: #1c40a3f8;
+  background-color: #085283;
 }
 
 .container-border {
@@ -12,20 +12,20 @@ body {
   height: 100%;
   padding: 0;
   margin: 1rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .home {
   display: flex;
-  width: 2rem;
+  width: 1rem;
   height: 2rem;
   font-size: 3rem;
   align-items: center;
   align-content: center;
   justify-content: center;
   text-align: center; /* Added */
-  margin: 0.5rem;
   text-decoration: none;
+  color: #fff;
 }
 
 .stock {
@@ -38,6 +38,20 @@ body {
   justify-content: center;
   gap: 1rem;
   border: 0.1rem solid #fff;
+}
+
+.logo {
+  display: flex;
+  width: 2rem;
+  height: 3rem;
+  padding: 0.5rem;
+}
+
+.link-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-border {
@@ -64,6 +78,14 @@ body {
   font-size: 0.9rem;
 }
 
+.stock-name {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .price-change-container {
   display: flex;
   flex-direction: row;
@@ -80,11 +102,28 @@ body {
 
 th {
   font-size: 0.9rem;
+  align-items: flex-start;
 }
 
-td,
 tr {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.2rem;
+  line-height: 1.6;
+  vertical-align: top;
+}
+
+tr:nth-child(2n+1) {
+  background-color: #0a6aaa;
+}
+
+tr:nth-child(2n+2) {
+  background-color: #094166;
+}
+
+td {
+  align-items: flex-end;
 }
 
 .day-high-low {
@@ -94,22 +133,26 @@ tr {
 
 .market-value {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 0.1rem solid gray;
-  border-radius: 0.5rem;
-  padding: 0.05rem;
-  width: auto;
+  flex-direction: column;
+  width: 100%;
+  line-height: 1.6;
+  vertical-align: top;
 }
 
-.non-divider {
-  align-items: center;
+.divider-cell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-right: 10px;
+  height: 100%;
   text-align: center;
   font-weight: 400;
 }
 
-.divider-cell {
-  border-right: 1px solid #ccc;
+.divid-cell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   padding-right: 10px;
   height: 1rem;
   align-items: center;

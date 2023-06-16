@@ -1,7 +1,16 @@
 :root {
   --tw-text-opacity: 1;
   --primary-color: #fff;
-  --secondary-color: #2e205b;
+  --secondary-color: #085283;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.2rem;
+  gap: 5rem;
+  align-items: center;
 }
 
 .stock-trnsit {
@@ -10,6 +19,7 @@
   width: 100%;
   padding: 0;
   background-color: var(--primary-color);
+  overflow-x: hidden;
 }
 
 @keyframes marquee {
@@ -27,31 +37,38 @@
   flex-direction: row;
   padding: 0.2rem 0.5rem;
   align-items: center;
-  gap: 0.2rem;
+  gap: 0.5rem;
   height: 2rem;
   font-family: myFont, sans-serif;
-  animation: marquee 40s linear infinite;
+  animation: marquee 200s linear infinite;
 }
 
 .search {
-  padding: 0.5rem;
-  width: 20rem;
+  width: 15rem;
+  height: 2rem;
   border-radius: 0.5rem;
 }
 
 .stock-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0.5rem;
+  grid-gap: 0;
   padding: 2rem;
   font-family: myFont, sans-serif;
 }
 
+.scroll {
+  display: flex;
+  width: 100%;
+  background: #000;
+}
+
 .border {
-  margin: 0;
+  margin: 2rem;
   width: auto;
   height: auto;
   align-items: center;
+  padding: 0;
 }
 
 .card {
@@ -64,11 +81,10 @@
 }
 
 .card-ref {
-  width: 10rem;
-  height: 8rem;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 0.52rem;
+  width: 11rem;
+  height: 9rem;
+  padding: 1rem;
+  border: 0.09rem solid var(--primary-color);
 }
 
 .card-item {
@@ -76,16 +92,20 @@
   flex-direction: column;
 }
 
-.card-item:nth-child(3n+1) {
-  background-color: #1cc08f;
+.card-item:nth-child(4n+1) {
+  background-color: #085283;
 }
 
-.card-item:nth-child(3n+2) {
-  background-color: #1c84c9;
+.card-item:nth-child(4n+2) {
+  background-color: #0c639c;
 }
 
-.card-item:nth-child(3n+3) {
-  background-color: #1bb4cf;
+.card-item:nth-child(4n+3) {
+  background-color: #0c639c;
+}
+
+.card-item:nth-child(4n+4) {
+  background-color: #085283;
 }
 
 h1,
@@ -117,7 +137,8 @@ h4 {
 
 .symbol {
   font-size: 1rem;
-  color: var(--secondary-color);
+  font-weight: bold;
+  color: var(--primary-color);
 }
 
 .name {

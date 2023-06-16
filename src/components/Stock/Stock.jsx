@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { fetchStockData } from '../../redux/Stocks/StocksSlice';
 import './Stock.css';
+import logo from '../../assests/images/logo.svg';
 
 const Stock = () => {
   const stocks = useSelector((state) => state.stocks.stocks);
@@ -45,111 +46,121 @@ const Stock = () => {
 
   return (
     <>
-      <Link to="/" className="home">&lt;</Link>
       <div className="container-border">
         <div className="stock card-item-border card-border card-ref-border" key={uuidv4()}>
+          <div className="link-container">
+            <Link to="/" className="home">&lt;</Link>
+            <img src={logo} alt="logo" className="logo" />
+          </div>
           <div className="header-border">
-            <div className="header-container">
-              <span className="stock-symbol">
-                {selectedStock.exchange}
-                :
-                {selectedStock.symbol}
-              </span>
-              <span className="stock-name">{selectedStock.name}</span>
-            </div>
-            <div className="price-change-container">
-              <div className="divider-cell  time-price font">
-                <span className="divider">
-                  $
-                  {selectedStock.price}
-                </span>
-                <span className="time">{formattedTimestamp}</span>
-              </div>
-              <div className="price">
-                <span style={valueStyles}>{selectedStock.changesPercentage}</span>
+            <table>
+              <tbody>
+                <tr className="exchange">
+                  <td>
+                    {selectedStock.name}
+                  </td>
+                  <td>
+                    (
+                    {selectedStock.symbol}
+                    )
+                  </td>
+                </tr>
+                <tr>
+                  <td className="stock-symbol">
+                    {selectedStock.exchange}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="market-value">
+            <table className="divider-cell font">
+              <tbody>
+                <tr>
+                  <th>Symbol</th>
+                  <td>{selectedStock.symbol}</td>
+                </tr>
+                <tr>
+                  <th>Price</th>
+                  <td>{selectedStock.price}</td>
+                </tr>
+                <tr>
+                  <th>Stock Change</th>
+                  <td style={valueStyles}>{selectedStock.change}</td>
+                </tr>
+                <tr>
+                  <th>Changes percentage</th>
+                  <td style={valueStyles}>{selectedStock.changesPercentage}</td>
+                </tr>
+                <tr>
+                  <th>Day Low</th>
+                  <td>{selectedStock.dayLow}</td>
+                </tr>
+                <tr>
+                  <th>Day High</th>
+                  <td>{selectedStock.dayHigh}</td>
+                </tr>
+                <tr>
+                  <th>Year High</th>
+                  <td>{selectedStock.yearHigh}</td>
+                </tr>
+                <tr>
+                  <th>Year Low</th>
+                  <td>{selectedStock.yearLow}</td>
+                </tr>
+                <tr>
+                  <th>Market Cap</th>
+                  <td>{formatMarketCap(selectedStock.marketCap)}</td>
 
-                <span style={valueStyles} className="symbol">
-                  {selectedStock.change}
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="market-value">
-            <table>
-              <thead>
-                <tr>
-                  <th className="divider-cell font">Day Low</th>
-                  <th className="divider-cell font">Day High</th>
-                  <th className="divider-cell font">Year High</th>
-                  <th className="non-divider font">Year Low</th>
                 </tr>
-              </thead>
-              <tbody>
                 <tr>
-                  <td className="divider-cell font">{selectedStock.dayLow}</td>
-                  <td className="divider-cell font">{selectedStock.dayHigh}</td>
-                  <td className="divider-cell font">{selectedStock.yearHigh}</td>
-                  <td className="non-divider font">{selectedStock.yearLow}</td>
+                  <th>Price Avg 50</th>
+                  <td>{formatMarketCap(selectedStock.priceAvg50)}</td>
+
                 </tr>
-              </tbody>
-            </table>
-          </div>
-          <div className="market-value">
-            <table>
-              <thead>
                 <tr>
-                  <th className="divider-cell font">Market Cap</th>
-                  <th className="divider-cell font">Price Avg 50</th>
-                  <th className="divider-cell font">Price Avg 200</th>
-                  <th className="non-divider font">Average Volume</th>
+                  <th>Price Avg 200</th>
+
+                  <td>{formatMarketCap(selectedStock.priceAvg200)}</td>
+
                 </tr>
-              </thead>
-              <tbody>
                 <tr>
-                  <td className="divider-cell font">{formatMarketCap(selectedStock.marketCap)}</td>
-                  <td className="divider-cell font">{formatMarketCap(selectedStock.priceAvg50)}</td>
-                  <td className="divider-cell font">{formatMarketCap(selectedStock.priceAvg200)}</td>
-                  <td className="non-divider font font">{formatMarketCap(selectedStock.avgVolume)}</td>
+                  <th>Average Volume</th>
+
+                  <td>{formatMarketCap(selectedStock.avgVolume)}</td>
                 </tr>
-              </tbody>
-            </table>
-          </div>
-          <div className="market-value">
-            <table>
-              <thead>
                 <tr>
-                  <th className="divider-cell font">Open</th>
-                  <th className="divider-cell font">Previous Close</th>
-                  <th className="divider-cell font">EPS</th>
-                  <th className="non-divider font">PE Ratio</th>
+                  <th>Open</th>
+                  <td>{selectedStock.open}</td>
                 </tr>
-              </thead>
-              <tbody>
                 <tr>
-                  <td className="divider-cell font">{selectedStock.open}</td>
-                  <td className="divider-cell font">{selectedStock.previousClose}</td>
-                  <td className="divider-cell font">{selectedStock.eps}</td>
-                  <td className="non-divider font">{formatMarketCap(selectedStock.pe)}</td>
+                  <th>Previous Close</th>
+                  <td>{selectedStock.previousClose}</td>
+                </tr>
+                <tr>
+                  <th>EPS</th>
+                  <td>{selectedStock.eps}</td>
+                </tr>
+                <tr>
+                  <th>PE Ratio</th>
+                  <td>{formatMarketCap(selectedStock.pe)}</td>
+                </tr>
+                <tr>
+                  <th>Earnings</th>
+                  <td>{selectedStock.earningsAnnouncement}</td>
+                </tr>
+                <tr>
+                  <th>Shares Outstanding</th>
+                  <td>{formatMarketCap(selectedStock.sharesOutstanding)}</td>
+                </tr>
+                <tr>
+                  <th>timestamp</th>
+                  <td className="time">{formattedTimestamp}</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div className="market-value">
-            <table>
-              <thead>
-                <tr>
-                  <th className="divider-cell font"> earnings Announcement</th>
-                  <th className="non-divider font">shares Outstanding</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="divider-cell font">{selectedStock.earningsAnnouncement}</td>
-                  <td className="non-divider font">{formatMarketCap(selectedStock.sharesOutstanding)}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+
         </div>
       </div>
     </>
