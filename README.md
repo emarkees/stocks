@@ -78,6 +78,8 @@ This App is developed to show real time stock quotes base on the price, change p
   <!--  This feature is not implemented yet  -->
 
 ## Video presenting the features of the project
+ <a href="https://www.loom.com/share/051af112aae04623889b8163ca646216?sid=a7ffdc72-4ea4-491c-9909-9215054e60b3
+">Click here</a> to video presentation
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
