@@ -173,16 +173,40 @@ h4 {
   .stock-container {
     grid-template-columns: repeat(5, 1fr);
   }
+
+  .logo-container {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    gap: 5rem;
+    justify-content: space-between;
+  }
 }
 
 @media screen and (min-width: 486px)  and (max-width: 786px) {
   .stock-container {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .logo-container {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    gap: 5rem;
+    justify-content: space-between;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .stock-container {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .logo-container {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    gap: 5rem;
+    justify-content: space-between;
   }
 }
