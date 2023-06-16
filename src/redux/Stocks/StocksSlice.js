@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const symbol = 'A';
+const symbol = 'A,AA,AAC,AACG,AACI,AACT,AADI,AAIC,AAL,AAP,AAPL,AAT,BGS,BGSF,BGXX,BHVN,BIAF,BIDU,BIG,BIGC,BIIB,BIOX,BIP,BIPC,CASA,CASH,CASI,CASS,CASY,CAT,CATC,CATO';
 
-const apiKey = '8ad02420a2fa95c85c6d259810c4f20';
+const apiKey = '8ad02420a2fa95c85c6d259810c4f20a';
 
 const quoteUrl = `https://financialmodelingprep.com/api/v3/quote/${symbol}?apikey=${apiKey}`;
 const historicalDataUrl = `https://financialmodelingprep.com/api/v3/historical-price-full/${symbol}?apikey=${apiKey}`;

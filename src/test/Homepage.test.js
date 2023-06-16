@@ -13,7 +13,6 @@ jest.mock('react-redux', () => ({
 
 jest.mock('./Homepage.css');
 
-
 jest.mock('react-router-dom', () => ({
   useNavigate: jest.fn(),
 }));
@@ -58,8 +57,12 @@ describe('Homepage', () => {
     useDispatch.mockReturnValue(mockedDispatch);
 
     const mockedStocks = [
-      { symbol: 'AAPL', name: 'Apple', price: 150, changesPercentage: 1.5 },
-      { symbol: 'GOOGL', name: 'Google', price: 2500, changesPercentage: -2.0 },
+      {
+        symbol: 'AAPL', name: 'Apple', price: 150, changesPercentage: 1.5,
+      },
+      {
+        symbol: 'GOOGL', name: 'Google', price: 2500, changesPercentage: -2.0,
+      },
     ];
     useSelector.mockReturnValue({
       stocks: mockedStocks,
@@ -81,8 +84,12 @@ describe('Homepage', () => {
     useNavigate.mockReturnValue(mockedNavigate);
 
     const mockedStocks = [
-      { symbol: 'AAPL', name: 'Apple', price: 150, changesPercentage: 1.5 },
-      { symbol: 'GOOGL', name: 'Google', price: 2500, changesPercentage: -2.0 },
+      {
+        symbol: 'AAPL', name: 'Apple', price: 150, changesPercentage: 1.5,
+      },
+      {
+        symbol: 'GOOGL', name: 'Google', price: 2500, changesPercentage: -2.0,
+      },
     ];
     useSelector.mockReturnValue({
       stocks: mockedStocks,

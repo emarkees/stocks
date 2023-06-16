@@ -10,7 +10,7 @@ module.exports = {
   // Stop running tests after `n` failures
   // bail: 0,
   transform: {
-    "^.+\\.jsx?$": "babel-jest"
+    '^.+\\.jsx?$': 'babel-jest',
   },
 
   // The directory where Jest should store its cached dependency information

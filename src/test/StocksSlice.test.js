@@ -1,9 +1,8 @@
 jest.mock('axios');
 
-import { createAsyncThunk } from '@reduxjs/toolkit';
-
 const axios = jest.requireActual('axios');
 const { fetchHistoricalData, fetchStockData } = jest.requireActual('./stocksSlice');
+const stocksReducer = jest.requireMock('./stocksSlice');
 
 describe('stocksSlice', () => {
   describe('fetchStockData', () => {
