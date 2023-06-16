@@ -74,7 +74,7 @@ This App is developed to show real time stock quotes base on the price, change p
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
- <a href="">Click here</a> to view live version 
+ <a href="https://grr-lhtg.onrender.com">Click here</a> to view live version 
   <!--  This feature is not implemented yet  -->
 
 ## Video presenting the features of the project
