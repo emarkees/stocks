@@ -78,14 +78,6 @@ body {
   font-size: 0.9rem;
 }
 
-.stock-name {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
 .price-change-container {
   display: flex;
   flex-direction: row;
@@ -149,38 +141,9 @@ td {
   font-weight: 400;
 }
 
-.divid-cell {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-right: 10px;
-  height: 1rem;
-  align-items: center;
-  text-align: center;
-  font-weight: 400;
-}
-
-.time-price {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-  margin: 0;
-  justify-content: center;
-}
-
-.divider {
-  color: rgb(233, 223, 223);
-}
-
 .time {
   font-weight: 100;
   font-size: 0.7rem;
-}
-
-.price {
-  display: flex;
-  flex-direction: column;
 }
 
 .font {
