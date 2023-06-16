@@ -29,7 +29,7 @@
 
 
 # 📖 [Stock Quote] <a name="about-project"></a>
-
+This App is developed to show real time stock quotes base on the price, change percentages and other  parameters. It is design to determine how the market trends moves.
 **[Stock Quote]** 
 
 ## 🛠 Built With <a name="built-with"></a>
