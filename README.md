@@ -1,70 +1,196 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center" style="text-align: center">
+  <h1><b>Stock Quote</b></h1>
+</div>
 
-## Available Scripts
+# 📗 Table of Contents 
 
-In the project directory, you can run:
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+    - [Walkthrough to the Leaderboard Scores](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 📖 [Stock Quote] <a name="about-project"></a>
+This App is developed to show real time stock quotes base on the price, change percentages and other  parameters. It is design to determine how the market trends moves.
+**[Stock Quote]** 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Built With <a name="built-with"></a>
 
-### `npm test`
+### Tech Stack <a name="tech-stack"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://www.w3.org/standards/webdesign/htmlcss.html#whathtml">HTML</a></li>
+    <li><a href="https://www.w3.org/standards/webdesign/htmlcss.html#whatcss">CSS</a></li>
+    <li><a href="https://www.w3.org/standards/webdesign/script">JavaScript</a></li>
+  </ul>
+</details>
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://jestjs.io/">Jest</a></li>
+    <li><a href="https://react.dev/">React</a></li>
+    <li><a href="https://react-redux.js.org/">Redux</a></li>
+  </ul>
+</details>
+  
+### Key Features <a name="key-features"></a>
 
-### `npm run build`
+**Enlist skill sets and tech stack**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Use React documentation.
+- Use React components.
+- Use React props.
+- Use React Router.
+- Connect React and Redux whit API.
+- Handle events in a React app.
+- Write unit tests with React Testing Library.
+- Use styles in a React app.
+- Use React hooks.
+- Apply React best practices and language style guides in code.
+- Use store, actions and reducers in React.
+- Use the [Stock Quote](https://site.financialmodelingprep.com/developer/docs/stock-api/) API
+- Perform a code review for a team member.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Live Demo <a name="live-demo"></a>
 
-### `npm run eject`
+ <a href="https://grr-lhtg.onrender.com">Click here</a> to view live version 
+  <!--  This feature is not implemented yet  -->
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Video presenting the features of the project
+ <a href="https://www.loom.com/share/051af112aae04623889b8163ca646216?sid=a7ffdc72-4ea4-491c-9909-9215054e60b3
+">Click here</a> to video presentation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 💻 Getting Started <a name="getting-started"></a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To get a local copy up and running follow these simple example.
 
-## Learn More
+### Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Clone this repository to your desired folder:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Example commands:
 
-### Code Splitting
+```sh
+  cd my-folder
+  git https://github.com/emarkees/stocks.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Prerequisites
 
-### Analyzing the Bundle Size
+In order to run this project you need:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  * Visual Studio Code
+  * Browser [Chrome]
+  * Linters
 
-### Making a Progressive Web App
+- Create a repo on your repositores files.
+- Clone or make a copy of this repo on your local machine.
+- Follow GitHub flow.
+- A carefully reading of this README.md is required.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Install
 
-### Advanced Configuration
+Install this project with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Example command:
 
-### Deployment
+```
+  sh
+  npm install 
+```
+### Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To run the project, execute the following command:
 
-### `npm run build` fails to minify
+Example command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+  sh
+  npm start
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+# 👤 **Adeyemi Olusola**
+
+- GitHub: [@emarkees](https://github.com/emarkees)
+- Twitter: [@McEmarkees](https://twitter.com/mcEmarkees)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/adeyemi-olusola/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 👥 Future Features <a name="future-features"></a>
+
+We propose to implement:
+
+- [ ] **User Logging.**
+- [ ] **User Dashboard.**
+- [ ] **User Authentication**
+- [ ] **Stock Chart**
+- [ ] **Add more Stock Symbols using API**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/emarkees/stocks/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+Help me with your criticisms and your suggestions, you will be blessed for such a noble gesture and give me a ⭐️ if you like this project. click [here ⭐️](https://github.com/emarkees/stocks/stargazers)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank Microverse for this opportunity.<br>
+I would like to acknowledge and give credit to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for the exceptional design that served as the foundation for this project.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

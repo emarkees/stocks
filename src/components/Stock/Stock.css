@@ -1,0 +1,152 @@
+#root,
+body {
+  height: auto;
+  background-color: #085283;
+}
+
+.container-border {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  padding: 0;
+  margin: 1rem;
+  margin-top: 1rem;
+}
+
+.home {
+  display: flex;
+  width: 1rem;
+  height: 2rem;
+  font-size: 3rem;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center; /* Added */
+  text-decoration: none;
+  color: #fff;
+}
+
+.stock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0.7rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: 0.1rem solid #fff;
+}
+
+.logo {
+  display: flex;
+  width: 2rem;
+  height: 3rem;
+  padding: 0.5rem;
+}
+
+.link-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-border {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  align-items: center;
+  gap: 2rem;
+  color: #fff;
+}
+
+.header-container {
+  align-items: center;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.1rem;
+  flex-direction: column;
+}
+
+.stock-symbol {
+  width: auto;
+  height: auto;
+  font-size: 0.9rem;
+}
+
+.price-change-container {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+  border: 0.1rem solid var(--secondary-color);
+  border-radius: 0.5rem;
+  gap: 0.9rem;
+  margin: 0;
+}
+
+th {
+  font-size: 0.9rem;
+  align-items: flex-start;
+}
+
+tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.2rem;
+  line-height: 1.6;
+  vertical-align: top;
+}
+
+tr:nth-child(2n+1) {
+  background-color: #0a6aaa;
+}
+
+tr:nth-child(2n+2) {
+  background-color: #094166;
+}
+
+td {
+  align-items: flex-end;
+}
+
+.day-high-low {
+  display: flex;
+  flex-direction: column;
+}
+
+.market-value {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  line-height: 1.6;
+  vertical-align: top;
+}
+
+.divider-cell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-right: 10px;
+  height: 100%;
+  text-align: center;
+  font-weight: 400;
+}
+
+.time {
+  font-weight: 100;
+  font-size: 0.7rem;
+}
+
+.font {
+  font-family: myFont, sans-serif;
+  color: #fff;
+}
