@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchStockData } from '../../redux/Stocks/StocksSlice';
 import Homepage from './Homepage';
 
 // Mock the useSelector and useDispatch hooks
@@ -9,9 +8,6 @@ jest.mock('react-redux', () => ({
   useSelector: jest.fn(),
   useDispatch: jest.fn(),
 }));
-
-// Import axios inside a module
-const axios = require('axios');
 
 describe('Homepage', () => {
   beforeEach(() => {
@@ -24,8 +20,12 @@ describe('Homepage', () => {
     // Mock the useSelector hook to return sample data
     useSelector.mockReturnValue({
       stocks: [
-        { symbol: 'AAPL', name: 'Apple', price: 150, changesPercentage: '+2.5%' },
-        { symbol: 'GOOGL', name: 'Google', price: 2500, changesPercentage: '-1.2%' },
+        {
+          symbol: 'AAPL', name: 'Apple', price: 150, changesPercentage: '+2.5%',
+        },
+        {
+          symbol: 'GOOGL', name: 'Google', price: 2500, changesPercentage: '-1.2%',
+        },
       ],
       status: 'succeeded',
     });

@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-const axios = require('axios');
+import axios from 'axios';
 
 const symbol = 'A,AA,AAC,AACG,AACI,AACT,AADI,AAIC,AAL,AAP,AAPL,AAT,BGS,BGSF,BGXX,BHVN,BIAF,BIDU,BIG,BIGC,BIIB,BIOX,BIP,BIPC,CASA,CASH,CASI,CASS,CASY,CAT,CATC,CATO';
 
