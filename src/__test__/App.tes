@@ -1,0 +1,70 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import Homepage from '../components/Homepage/Homepage';
+
+// Mock the Redux store
+const store = createStore(() => ({
+  stocks: {
+    stocks: [
+      {
+        symbol: 'AAPL',
+        name: 'Apple Inc.',
+        price: 150.0,
+        changesPercentage: '+2.5',
+      },
+    ],
+    status: 'idle',
+  },
+}));
+
+describe('Homepage', () => {
+  it('should render the Homepage component', () => {
+    render(
+      <Provider store={store}>
+        <Router>
+          <Homepage />
+        </Router>
+      </Provider>
+    );
+
+    // Assert that the component renders correctly
+    expect(screen.getByText('Search')).toBeInTheDocument();
+  });
+
+  it('should display stock information', () => {
+    render(
+      <Provider store={store}>
+        <Router>
+          <Homepage />
+        </Router>
+      </Provider>
+    );
+
+    // Assert that the stock information is displayed correctly
+    expect(screen.getByText('AAPL')).toBeInTheDocument();
+    expect(screen.getByText('Apple Inc.')).toBeInTheDocument();
+    expect(screen.getByText('$150.0')).toBeInTheDocument();
+    expect(screen.getByText('+2.5%')).toBeInTheDocument();
+  });
+
+  it('should navigate to the correct stock URL when a stock is clicked', () => {
+    const navigate = jest.fn();
+
+    render(
+      <Provider store={store}>
+        <Router>
+          <Homepage navigate={navigate} />
+        </Router>
+      </Provider>
+    );
+
+    const stockButton = screen.getByText('AAPL');
+    stockButton.click();
+
+    // Assert that the navigate function is called with the correct URL
+    expect(navigate).toHaveBeenCalledWith('/stock/AAPL');
+  });
+});

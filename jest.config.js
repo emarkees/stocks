@@ -9,21 +9,21 @@ module.exports = {
 
   // Stop running tests after `n` failures
   // bail: 0,
-  transform: {
-    '^.+\\.jsx?$': 'babel-jest',
-  },
 
   // The directory where Jest should store its cached dependency information
   // cacheDirectory: "C:\\Users\\BRIDGE CREDIT LTD\\AppData\\Local\\Temp\\jest",
 
   // Automatically clear mock calls, instances and results before every test
+  // clearMocks: false,
 
   // Indicates whether the coverage information should be collected while executing the test
+  // collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   // collectCoverageFrom: undefined,
 
   // The directory where Jest should output its coverage files
+  coverageDirectory: "coverage",
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -71,7 +71,14 @@ module.exports = {
   // ],
 
   // An array of file extensions your modules use
-  // moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
+  // moduleFileExtensions: [
+  //   "js",
+  //   "jsx",
+  //   "ts",
+  //   "tsx",
+  //   "json",
+  //   "node"
+  // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
@@ -168,10 +175,10 @@ module.exports = {
   // transform: undefined,
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  //  transformIgnorePatterns: [
-  //    "\\\\node_modules\\\\",
-  //    "\\.pnp\\.[^\\\\]+$"
-  //  ],
+  // transformIgnorePatterns: [
+  //   "\\\\node_modules\\\\",
+  //   "\\.pnp\\.[^\\\\]+$"
+  // ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,
